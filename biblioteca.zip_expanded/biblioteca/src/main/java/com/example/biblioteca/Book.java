@@ -12,7 +12,7 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String title;
     
     @ManyToOne
@@ -41,16 +41,16 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public String getAuthor() {
+        return author.getName();
     }
 
     public void setAuthor(Author author) {
         this.author = author;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return category.getName();
     }
 
     public void setCategory(Category category) {
